@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;900&display=swap");
+
+html,
+body {
+  transition: all ease-in 0.5s;
+  background-color: #252580;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Outfit, Helvetica, sans-serif;
+  font-size: 18px;
+}
+main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+.svg-container {
+  animation: rotate 160s ease-in-out infinite;
+}
+#section-conteudo {
+  width: 40vw;
+  color: white;
+  padding: 1rem 1rem;
+  article {
+    p {
+      margin-bottom: 0;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  h2 {
+    cursor: pointer;
+    font-size: calc(1em + 5vw);
+    margin: 1rem 0;
+    animation: background 60s ease-in-out infinite;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(216, 135, 220, 1) 10%,
+      rgba(220, 188, 214, 1) 20%,
+      rgba(247, 20, 186, 1) 30%,
+      rgba(232, 0, 53, 1) 40%,
+      rgba(255, 165, 38, 1) 50%,
+      rgba(153, 233, 194, 1) 60%,
+      rgba(0, 128, 24, 1) 70%,
+      rgba(33, 207, 172, 1) 80%,
+      rgba(0, 0, 249, 1) 90%,
+      rgba(85, 220, 246, 1) 100%
+    );
+    background-size: 1000% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 150px;
+      li {
+        width: 150px;
+        a {
+          font-size: 0.9rem;
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          font-weight: 900;
+          padding: 2px 0;
+          position: relative;
+          &::before {
+            display: block;
+            content: " ";
+            height: 3px;
+            border-radius: 10px;
+            width: 0;
+            background-color: white;
+            position: absolute;
+            bottom: -1px;
+            transition: width ease-in 0.3s;
+          }
+          &:hover:before {
+            width: 100%;
+          }
+        }
+        a.h {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    border-top: 1px solid white;
+    padding-top: .5rem;
+    margin-top: 2rem;
+    a {
+      color:white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: .8rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.info-container-closed {
+  width:0 !important;
+  button {
+    display:none;
+  }
+}
+.info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 40vw;
+  overflow: hidden;
+  background-color:white;
+  transition: width ease-in .2s;
+  .content {
+    position: relative;
+    width:40vw;
+    height: 100vh;
+    overflow-y: scroll;
+    button {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      cursor: pointer;
+      background-color: #252580;
+      color:white;
+      font-family: Outfit, Helvetica, sans-serif;
+      border:0;
+      font-size:1.2rem;
+      text-transform: uppercase;
+      border-radius: 50px;
+      padding: .3rem 2rem;
+    }
+    article {
+      color: #404040;
+      padding: 1.5rem 1.5rem 4rem 1.5rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color:#252580;
+        text-transform: uppercase;
+      }
+    }
+  }
+  #texto-fontes {
+    a {
+      text-decoration: none;
+      color:#252580;
+      font-size: 0.8rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p span {
+      display:block;
+      font-weight: bold;
+    }
+  }
+}
+circle {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+circle:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.5, 1.5);
+}
+circle.ho {
+  opacity: 0.1;
+  transfor: scale(0.7, 0.7);
+}
+circle.h {
+  opacity: 1;
+  transform: scale(1.5, 1.5);
+}
+.hide {
+  opacity: 0.3;
+}
+circle.selected {
+  transform: scale(2);
+}
+@keyframes background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 780px) {
+  html,
+  body {
+    overflow: auto;
+  }
+  main {
+    display: block;
+  }
+  #section-conteudo {
+    width: 100%;
+  }
+}
