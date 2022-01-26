@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   font-family: Outfit, Helvetica, sans-serif;
   font-size: 18px;
+  height: 100vh;
 }
 
 main {
@@ -22,21 +23,22 @@ main {
 }
 
 #section-conteudo {
-  width: 40vw;
+  width: 50vw;
   color: white;
-  padding: 1rem 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 #section-conteudo article p {
   margin-bottom: 0;
 }
 #section-conteudo article h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin: 0;
 }
 #section-conteudo h2 {
   cursor: pointer;
   font-size: calc(1em + 5vw);
-  margin: 1rem 0;
+  margin: 0;
   animation: background 60s ease-in-out infinite;
   background: linear-gradient(90deg, white 0%, #d887dc 10%, #dcbcd6 20%, #f714ba 30%, #e80035 40%, #ffa526 50%, #99e9c2 60%, #008018 70%, #21cfac 80%, #0000f9 90%, #55dcf6 100%);
   background-size: 1000% 100%;
@@ -84,7 +86,7 @@ main {
 #section-conteudo footer {
   border-top: 1px solid white;
   padding-top: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 #section-conteudo footer a {
   color: white;
@@ -108,14 +110,14 @@ main {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   overflow: hidden;
   background-color: white;
   transition: width ease-in 0.2s;
 }
 .info-container .content {
   position: relative;
-  width: 40vw;
+  width: 50vw;
   height: 100vh;
   overflow-y: scroll;
 }

@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   font-family: Outfit, Helvetica, sans-serif;
   font-size: 18px;
+  height: 100vh;
 }
 main {
   display: flex;
@@ -20,22 +21,23 @@ main {
   animation: rotate 160s ease-in-out infinite;
 }
 #section-conteudo {
-  width: 40vw;
+  width: 50vw;
   color: white;
-  padding: 1rem 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
   article {
     p {
       margin-bottom: 0;
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin:0;
     }
   }
   h2 {
     cursor: pointer;
     font-size: calc(1em + 5vw);
-    margin: 1rem 0;
+    margin: 0;
     animation: background 60s ease-in-out infinite;
     background: linear-gradient(
       90deg,
@@ -100,7 +102,7 @@ main {
   footer {
     border-top: 1px solid white;
     padding-top: .5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     a {
       color:white;
       text-decoration: none;
@@ -123,13 +125,13 @@ main {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   overflow: hidden;
   background-color:white;
   transition: width ease-in .2s;
   .content {
     position: relative;
-    width:40vw;
+    width:50vw;
     height: 100vh;
     overflow-y: scroll;
     button {
