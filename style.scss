@@ -3,7 +3,8 @@
 html,
 body {
   transition: all ease-in 0.5s;
-  background-color: #252580;
+  background: #252580 url('assets/bg.jpg') center center;
+  background-size: cover;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -18,7 +19,10 @@ main {
   align-items: center;
 }
 .svg-container {
-  animation: rotate 160s ease-in-out infinite;
+  //animation: rotate 160s ease-in-out infinite;
+}
+#section-infografico {
+  width: 50vw;
 }
 #section-conteudo {
   width: 50vw;
